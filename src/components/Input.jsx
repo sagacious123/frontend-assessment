@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CountryContext } from '../context/CountryStateProvider'
 
-const Input = ({ search, setSearch }) => {
+const Input = () => {
+
+    const {search, setSearch} = useContext(CountryContext);
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   };

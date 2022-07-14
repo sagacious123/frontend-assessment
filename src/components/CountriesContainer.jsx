@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import CountryCard from "./CountryCard";
 import Loader from "./Loader";
+import { CountryContext } from "../context/CountryStateProvider";
 
-const CountriesContainer = ({ countries, loading }) => {
+const CountriesContainer = () => {
+  const { countries, loading } = useContext(CountryContext);
+
   return (
     <div className="countries-container">
       {loading ? (
