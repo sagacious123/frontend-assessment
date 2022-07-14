@@ -8,20 +8,6 @@ const CountryStateProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
 
-  //   useEffect(() => {
-  //     setLoading(true);
-
-  //     axios
-  //       .get("https://restcountries.com/v3.1/all")
-  //       .then((response) => {
-  //         setLoading(false);
-  //         setCountries(response.data);
-  //       })
-  //       .catch((error) => {
-  //         setLoading(false);
-  //         alert(error.response.data.message);
-  //       });
-  //   }, []);
 
   useEffect(() => {
     if (search !== "") {
@@ -34,7 +20,7 @@ const CountryStateProvider = ({ children }) => {
           alert(error.response.data.message);
         });
     } else {
-        
+
       setLoading(true);
 
       axios
